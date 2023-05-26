@@ -43,10 +43,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
-                //    R.id.searchFragment,
-                //  R.id.shoppingCartFragment,
-                //R.id.favoritesFragment,
-                // R.id.profileFragment,
+                R.id.searchFragment,
+                R.id.mapFragment,
+                R.id.profileFragment,
             )
         )
         navHostFragment.navController.addOnDestinationChangedListener(this)
