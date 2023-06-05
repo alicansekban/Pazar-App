@@ -7,5 +7,6 @@
     <string name="search">Arama</string>
     <string name="map">Harita</string>
     <string name="profile">Profil</string>
+    <string name="home_title">Popüler Ürünler</string>
 
 </resources>

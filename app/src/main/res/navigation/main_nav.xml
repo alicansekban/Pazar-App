@@ -9,5 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.alican.mvvm_starter.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.alican.mvvm_starter.ui.home.detail.ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail"
+        android:label="ProductDetailFragment" />
 </navigation>

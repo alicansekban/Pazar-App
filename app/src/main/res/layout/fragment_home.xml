@@ -9,17 +9,27 @@
 
 
         <include
-            layout="@layout/layout_main_toolbar"
-            android:id="@+id/toolBar"/>
+            android:id="@+id/toolBar"
+            layout="@layout/layout_main_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplay_bold"
+            android:text="@string/home_title"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/toolBar"
-            tools:listitem="@layout/item_home_adapter"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2" />
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:spanCount="2"
+            tools:listitem="@layout/item_home_adapter" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

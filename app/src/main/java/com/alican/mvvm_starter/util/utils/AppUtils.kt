@@ -84,6 +84,9 @@ fun showDialogTop(message: String?, title: String?, activity: Activity) {
     alerter.show()
 }
 
+fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) = Toast.makeText(this, message, duration).show()
+
+
 fun Context.showToastMessage(errorMessage: String?, type: ToastType) {
 
     var textColor = -1
