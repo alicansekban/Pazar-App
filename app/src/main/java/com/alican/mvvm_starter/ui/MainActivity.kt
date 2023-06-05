@@ -5,15 +5,19 @@ import android.os.Handler
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.forEach
+import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.alican.mvvm_starter.R
 import com.alican.mvvm_starter.base.BaseActivity
 import com.alican.mvvm_starter.databinding.ActivityMainBinding
+import com.alican.mvvm_starter.util.utils.setupWithNavControllerView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,6 +32,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
         super.onCreate(savedInstanceState)
         initNavigation()
     }
+
 
     private fun initNavigation() {
 
@@ -57,6 +62,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
                 "Anasayfa" -> {
                     navHostFragment.findNavController().navigate(R.id.homeFragment)
                 }
+
+                "Arama" -> {
+                    navHostFragment.findNavController().navigate(R.id.searchFragment)
+                }
+
+                "Harita" -> {
+
+                    navHostFragment.findNavController().navigate(R.id.mapFragment)
+                }
+
+                "Profile" -> {
+
+                    navHostFragment.findNavController().navigate(R.id.profileFragment)
+                }
             }
         }
 
@@ -65,7 +84,22 @@ class MainActivity : BaseActivity<ActivityMainBinding>(),
             NavigationBarView.OnItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
                 when (item.title) {
+                    "Anasayfa" -> {
+                        navHostFragment.findNavController().navigate(R.id.main_nav)
+                    }
 
+                    "Arama" -> {
+                        navHostFragment.findNavController().navigate(R.id.search_nav)
+                    }
+
+                    "Harita" -> {
+
+                        navHostFragment.findNavController().navigate(R.id.map_nav)
+                    }
+
+                    "Profile" -> {
+                        navHostFragment.findNavController().navigate(R.id.profile_nav)
+                    }
                 }
                 return true
             }

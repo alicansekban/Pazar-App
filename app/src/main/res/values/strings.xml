@@ -2,4 +2,10 @@
     <string name="app_name">Pazar App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyCc-UlqjC1ZDPaKNwVOwEp5AoBhGaWG5HU</string>
+    <string name="home">AnaSayfa</string>
+    <string name="search">Arama</string>
+    <string name="map">Harita</string>
+    <string name="profile">Profil</string>
+
 </resources>
